@@ -1,5 +1,11 @@
 # 📰 GNews Harvester
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
+[![Puppeteer](https://img.shields.io/badge/puppeteer-powered-blue)](https://pptr.dev/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/gauravfs-14/gnews-harvester/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+
 A powerful web scraping tool for collecting news articles from Google News about specific topics over a defined time period.
 
 > This project is designed to help researchers, journalists, and developers gather news data efficiently while respecting web scraping best practices. For educational purposes only.
@@ -95,7 +101,7 @@ The harvester produces two outputs:
 
 ## Legal Considerations
 
-This tool is for educational purposes only. When scraping websites:
+This tool is for educational and research purposes only. When scraping websites:
 
 - Respect robots.txt files
 - Implement reasonable rate limiting
@@ -104,8 +110,32 @@ This tool is for educational purposes only. When scraping websites:
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📋 Project Structure
+
+```bash
+gnews-harvester/
+├── config.js           # Configuration settings
+├── data/               # Output directory for database and Excel files
+├── scripts/
+│   ├── index.js        # Main application entry point
+│   └── utils/          # Utility functions
+│       ├── getRandomUA.js
+│       ├── generateFingerprint.js 
+│       ├── generateMonthlyRanges.js
+│       └── setupSQLite.js
+├── package.json        # Project dependencies
+└── README.md           # This documentation
+```
+
+## 📬 Contact
+
+Have questions? Reach out to the maintainer:
+
+- GitHub: [@gauravfs-14](https://github.com/gauravfs-14)
+- Twitter: [@gaurav_fs_14](https://twitter.com/gaurav_fs_14)
