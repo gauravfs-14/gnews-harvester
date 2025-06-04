@@ -8,7 +8,8 @@
   "main": "scripts/index.js",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
-    "start": "node scripts/index.js",
+    "start": "git pull && node scripts/index.js",
+    "dev": "node scripts/index.js",
     "clean": "rm -rf node_modules package-lock.json && npm cache clean --force"
   },
   "dependencies": {
