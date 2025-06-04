@@ -38,17 +38,16 @@ npm install
 
 ## Configuration
 
-Edit the configuration object in `index.js` to customize your search:
+Edit the configuration in `config.js` to customize your search:
 
 ```javascript
-const config = {
-  searchTerms: ["climate change", "AI in education"],  // Topics to search for
-  yearsToSearch: 2,                                    // How many years back to search
-  pagesPerTerm: 5,                                     // Pages to scrape per search term per date range
-  outputFile: "news_output.xlsx",                      // Excel output filename
-  dbFile: "news_harvester.db",                         // SQLite database filename
-  delayBetweenRequests: 2000,                          // Delay between requests in milliseconds
-};
+// Configuration settings
+const SEARCH_TERMS = ["climate change", "AI in education"]; // Topics to search for
+const YEARS_TO_SEARCH = 2;                                  // How many years back to search
+const PAGES_PER_TERM = 5;                                   // Pages per search term per date range
+const OUTPUT_FILE = "news_output.xlsx";                     // Excel output filename
+const DB_FILE = "news_harvester.db";                        // SQLite database filename
+const DELAY_BETWEEN_REQUESTS = 2000;                        // Delay between requests (ms)
 ```
 
 ## Usage
@@ -56,7 +55,7 @@ const config = {
 Run the application with:
 
 ```bash
-node index.js
+npm start
 ```
 
 The program will:
@@ -71,8 +70,8 @@ The program will:
 
 The harvester produces two outputs:
 
-1. **SQLite Database** (`news_harvester.db`): Contains all scraped articles with metadata
-2. **Excel Spreadsheet** (`news_output.xlsx`): Formatted report with the following columns:
+1. **SQLite Database** (`data/news_harvester.db`): Contains all scraped articles with metadata
+2. **Excel Spreadsheet** (`data/news_output.xlsx`): Formatted report with the following columns:
    - News Media Name
    - Date
    - Title of the News
